@@ -1,0 +1,69 @@
+# 📈 Stock Trading Signal Prediction using Deep Learning
+
+This repository contains a comprehensive pipeline for predicting stock trading signals using historical price and volume data. The project leverages multiple machine learning and deep learning models, including:
+
+- 🧠 Support Vector Machine (SVM)
+- 🔁 Gated Recurrent Unit (GRU)
+- 🧠 CNN + LSTM Hybrid
+- 🧠 5-Layer Deep LSTM
+
+The goal is to classify future stock returns as potential **Buy (1)** or **Sell (0)** signals.
+
+---
+
+## 📊 Features
+
+- 📥 Fetch historical stock data using `twelvedata` API.
+- 📈 Add technical indicators using `pandas_ta`.
+- ⚠️ Handle class imbalance via weighted loss functions.
+- ✅ Clean and preprocess the data (missing values, scaling).
+- 🧮 Feature selection using VIF (Variance Inflation Factor) and RFE (Recursive Feature Elimination).
+- 🔍 Hyperparameter tuning with `Keras Tuner` and `GridSearchCV`.
+- 🧪 Model training and evaluation with classification metrics.
+- 📤 Export predicted trading signals to CSV for further use.
+
+---
+
+## 🔧 Tech Stack
+
+- Python (NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn)
+- TensorFlow / Keras
+- Pandas TA
+- Twelve Data API
+- Keras Tuner
+- SVM from Scikit-learn
+
+---
+
+## 🧪 Models Implemented
+
+### ✅ SVM (Support Vector Machine)
+- GridSearchCV for hyperparameter `C`.
+- RFE for top feature selection.
+
+### ✅ GRU (Gated Recurrent Unit)
+- 2-layer GRU with tunable units, dropout, learning rate.
+
+### ✅ CNN + LSTM
+- 1D Convolution for local patterns + LSTM for temporal dependencies.
+
+### ✅ 5-Layer Deep LSTM
+- 5 sequential LSTM layers with tunable units and dropout.
+- Best model saved and loaded for prediction.
+
+---
+
+## 📁 Output
+
+- **LSTM_Model_Signal_Test_Data.csv** — Includes predicted trading signals.
+- **Best model (`.keras`)** — Saved and reloaded for evaluation.
+- Evaluation metrics: ROC AUC, Confusion Matrix, Classification Report.
+
+---
+
+## 📦 Setup
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/stock-signal-lstm.git
+cd stock-signal-lstm
